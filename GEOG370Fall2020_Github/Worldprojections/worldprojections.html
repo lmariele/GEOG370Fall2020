@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projections</title>
+</head>
+<body>
+    <h1>In this project I learned how to display images in different projections</h1>
+    
+    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
+    <p>When using QGIS, I used the Indicatrix Mapper and Project Coordinator Reference System to find different available projections.
+        Using, the search bar I would look for different EPSG and ESRI files that didn't seem to distort the original image past being able to read the map.
+    </p>
+    
+    <h2>WGS84 Projection</h2>
+    <h3>This map is very easy and pleasant to read. The Tissot circles stayed relatively small but did get larger the further away from the equator that they were.</h3>
+    <a href=".//maps/4326.png">
+    <img src=".//maps/4326.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>Aitoff Projection</h2>
+    <h3>Only the very center of the map stayed the same. Looking at the Tissot circles, they not only grew in size the further away from the middle, but also distorted into ovals themselves. This was worse at the poles.</h3>
+    <a href=".//maps/54043.png">
+    <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Pseudo-Mercator Projection</h2>
+    <h3>I believe this is similar to, if not the, mercator map that is commonly used across the world. It's very easy to read and could be used for navigation.</h3>
+    <a href="./maps/Pseudo-Mercator_3857.png">
+    <img src="./maps/Pseudo-Mercator_3857.png" alt="Pseudo-Mercator" width='500px'>
+    </a>
+    <h2>Spherical Winkel 1 Projection</h2>
+    <h3>This map was very similar to the Psuedo-Mercator map but looked to be stretched along the longitudinal lines. It was more spherical in shape than WGS84.</h3>
+    <a href="./maps/Winkel1_53018.png">
+    <img src="./maps/Winkel1_53018.png" alt="Winkel" width='500px'>
+    </a>
+    <h2>Cylindrical Equal Area Projection</h2>
+    <h3>This stretched the map out along the latitudinal lines, into a cylindrical shape. The Tissot circles along the equator stay the same but there is severe distortion along the poles. North America for example looks twice as wide as it actually is.</h3>
+    <a href="./maps/CylindricalEqualArea_54034.png">
+    <img src="./maps/CylindricalEqualArea_54034.png" alt="Cylindrical" width='500px'>
+    </a>
+    <h2>Azimuthal Equidistant North Pole Projection</h2>
+    <h3>This map is very similar to the Conical Equidistant projection but gives a more complete look at the North Pole. It would not be useful in looking at the South Pole because of the large levels of distortion found there.</h3>
+    <a href="./maps/NorthPoleAzimuthalEquidistant_102016.png">
+    <img src="./maps/NorthPoleAzimuthalEquidistant_102016.png" alt="Azimuthal" width='500px'>
+    </a>
+    <h2>Conical Equidistant Projection</h2>
+    <h3>This map looks almost like a complete Azimuthal projection but lacks the complete circle to do so. There is very little distortion near the North Pole but extreme levels near Antartica.</h3>
+    <a href="./maps/EquidistantConic_54027.png">
+    <img src="./maps/EquidistantConic_54027.png" alt="Conical" width='500px'>
+    </a>
+    <h2>Spherical Craster Parabolic Projection</h2>
+    <h3>This map made the poles look very pointy with the most distortion found at the poles and antimeridian. It looks interesting.</h3>
+    <a href="./maps/SphereCrasterParabolic_53046.png">
+    <img src="./maps/SphereCrasterParabolic_53046.png" alt="Spherical Parabolic" width='500px'>
+    </a>
+    <h2>Spherical Eckert 1 Projection</h2>
+    <h3>This map has to be my favorite because it makes the equator very pointy and the overal map look like a hexagon. The level of texture is different and makes it more engaging for me.</h3>
+    <a href="./maps/SphereEckert1_53015.png">
+    <img src="./maps/SphereEckert1_53015.png" alt="Spherical Eckert" width='500px'>
+    </a>
+    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
+    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <p></p>
+    <h2>Data used for this project</h2>
+    <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
+</body>
+</html>
