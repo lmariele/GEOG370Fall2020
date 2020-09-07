@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>My First Custom Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+   <script src = "./dey_hall_4326.geojson"></script>
+
+</head>
+<body>
+
+    <div id="mapid"></div>
+    <style>
+        #mapid{ width: 900px; height: 500px;}
+    </style>
+
+    <script>
+        var map = L.map('mapid').setView([35.91, -79.05], 17);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {}).addTo(map)
+        L.marker([35.9098, -79.0507]).addTo(map)
+            .bindPopup("Dey Hall")
+            .openPopup();
+            
+        // L.geoJSON(deyhall).addTo(map)
+            var uncIcon = L.icon({
+                iconUrl: 'https://media.thetab.com/blogs.dir/104/files/2015/10/dey4.png',
+                iconSize: [50,50],
+                popupAnchor: [0,0]
+            });
+
+            var customPopup = "Dey Hall<br/><img src='https://i.pinimg.com/originals/75/55/43/755543be351d16b3de765fa5b716ea3f.jpg'width='100px'/>"
+
+            L.geoJSON(deyhall, { // a
+            pointToLayer: function (feature, latlng) { // b
+            return L.marker(latlng, {icon: uncIcon});}}) // c
+            .bindPopup(customPopup) // d
+            .addTo(map); //
+
+    </script>
+
+</body>
+</html>
