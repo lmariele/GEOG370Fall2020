@@ -28,7 +28,7 @@
     </style>
 
     <script>
-        var map = L.map('mapid').setView([35.0359, -84.3827], 16);
+        var map = L.map('mapid').setView([35.0359, -84.3827], 14);
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {}).addTo(map)
         L.marker([35.0359, -84.3827]).addTo(map)
             .bindPopup("Ducktown, TN")
