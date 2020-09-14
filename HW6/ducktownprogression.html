@@ -30,9 +30,9 @@
     <script>
         var map = L.map('mapid').setView([35.0359, -84.3827], 14);
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {}).addTo(map)
-        L.marker([35.0359, -84.3827]).addTo(map)
-            .bindPopup("Ducktown, TN")
-            .openPopup();
+        // L.marker([35.0359, -84.3827]).addTo(map)
+        //     .bindPopup("Ducktown, TN")
+        //     .openPopup();
             
         // L.geoJSON(towncenter).addTo(map)
             var uncIcon = L.icon({
@@ -49,9 +49,9 @@
             .bindPopup(customPopup) // d
             .addTo(map); //
 
-        L.marker([35.0480, -84.3621]).addTo(map)
-            .bindPopup("London Mills Trailings Ponds")
-            .openPopup();
+        // L.marker([35.0480, -84.3621]).addTo(map)
+        //     .bindPopup("London Mills Trailings Ponds")
+        //     .openPopup();
             
         // L.geoJSON(pond).addTo(map)
             var uncIcon = L.icon({
@@ -68,9 +68,9 @@
             .bindPopup(customPopup) // d
             .addTo(map); //
 
-        L.marker([35.0162, -84.3452]).addTo(map)
-            .bindPopup("Martin Campbell Field Airport")
-            .openPopup();
+        // L.marker([35.0162, -84.3452]).addTo(map)
+        //     .bindPopup("Martin Campbell Field Airport")
+        //     .openPopup();
             
         // L.geoJSON(airport).addTo(map)
             var uncIcon = L.icon({
@@ -86,6 +86,17 @@
             return L.marker(latlng, {icon: uncIcon});}}) // c
             .bindPopup(customPopup) // d
             .addTo(map); //
+
+            var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                }).addTo(map);
+     
+      L.tileLayer('../HW4/JustHistoricalImage/{z}/{x}/{y}.png', {
+        minZoom: 12,
+        maxZoom: 16,
+        tms: false,
+        attribution: 'USGS'
+      }).addTo(map);
 
     </script>
 
