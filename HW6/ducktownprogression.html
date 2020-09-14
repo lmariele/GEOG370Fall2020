@@ -88,6 +88,8 @@
             .addTo(map); //
 
             var daMarker = L.marker([35.0359, -84.3827]);
+            var daMarker2 = L.marker([35.0480, -84.3621]);
+            var daMarker3 = L.marker([35.0162, -84.3452]);
 
             var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
@@ -106,7 +108,9 @@
             }
 
             var daVectors = {
-                "Town Center":daMarker
+                "Town Center":daMarker,
+                "London Mills Trailings Ponds":daMarker2,
+                "Martin Campbell Field Airport":daMarker3
             }
 
             L.control.layers(daTiles, daVectors).addTo(map);
