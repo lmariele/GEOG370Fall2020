@@ -87,16 +87,29 @@
             .bindPopup(customPopup) // d
             .addTo(map); //
 
+            var daMarker = L.marker([35.0359, -84.3827]);
+
             var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
                 }).addTo(map);
      
-      L.tileLayer('../HW4/JustHistoricalImage/{z}/{x}/{y}.png', {
-        minZoom: 12,
-        maxZoom: 16,
-        tms: false,
-        attribution: 'USGS'
-      }).addTo(map);
+            var daPhoto = L.tileLayer('../HW4/JustHistoricalImage/{z}/{x}/{y}.png', {
+            minZoom: 12,
+            maxZoom: 16,
+            tms: false,
+            attribution: 'USGS'
+                }).addTo(map);
+
+            var daTiles = {
+                "EsriWorldImagery":Esri_WorldImagery,
+                "Ducktown Historical Image":daPhoto
+            }
+
+            var daVectors = {
+                "Town center":daMarker
+            }
+
+            L.control.layers(daTiles, daVectors).addTo(map);
 
     </script>
 
