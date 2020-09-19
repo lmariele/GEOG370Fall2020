@@ -1,7 +1,3 @@
-var craige = {
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "id": 1, "descrip": "Craige Dorm" }, "geometry": { "type": "Point", "coordinates": [-79.0450, 35.9027 ] } }
-]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e7d6126caccb69f6cd56c8ebc45e9041f339cc2ce360c2df0afa329e711746d
+size 298
